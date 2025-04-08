@@ -2,7 +2,7 @@
 
 ## This project uses Power BI Desktop and MS SQL Server to help analyze the potential of customers, countries, and products.
 
-## Data Modeling
+## **Data Modeling**
 ![Data Model](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/data_model.png)
 
 ## **Key Features:**
@@ -12,4 +12,7 @@
 Power BI Desktop
 
 ## **Key Insight**
+![Sales by Country](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_country.png)
+![Sales by Customer](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_customer.png)
+![Sales by Product](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_product.png)
 
