@@ -13,6 +13,12 @@ Power BI Desktop
 
 ## **Key Insight**
 ![Sales by Country](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_country.png)
-![Sales by Customer](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_customer.png)
-![Sales by Product](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_product.png)
+- Sales revenue is spread out and fairly evenly distributed across the three regions: North America, Oceania, and Europe.
+- At the country level, total sales in the U.S. and Australia account for the highest proportions (each contributing over 30%)
+- Overall sales have increased over time, with profit growing rapidly from late 2022 to early 2023.
 
+![Sales by Customer](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_customer.png)
+-
+
+![Sales by Product](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_product.png)
+- 
