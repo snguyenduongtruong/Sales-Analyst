@@ -8,4 +8,8 @@
 ## **Key Features:**
 📌 Sale Analyst: extract and visualize for analyzing the sales insights based on customers, countries, and products.
 
-📌 Customer Segmentation: Group customers based on shared characteristics and churn risk, allowing for targeted marketing and engagement efforts.
+## **Built with:**
+Power BI Desktop
+
+## **Key Insight**
+
