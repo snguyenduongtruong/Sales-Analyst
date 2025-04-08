@@ -17,6 +17,8 @@ FROM(
 	GROUP BY [Sales Territory Country]) t
 ORDER BY SalesByCountry DESC
 
+
+	
 /* Find the total sales by each month in each year, 
 -- and calculate the year-to-month cumulative total (accumulating from the first month to the current month within the same year).*/
 SELECT
@@ -36,6 +38,8 @@ FROM(
 	GROUP BY [Year], [Month Number of Year], [Month Name]) t
 ORDER BY [Year], [Month]
 
+
+	
 /* Find the total sales by each month in each year, by each quarter in each year, by each year and the overall total for all years. */
 SELECT
 	[Year],
@@ -57,6 +61,8 @@ FROM(
 	GROUP BY [Year], [Quarter], [Month Name], [Month Number of Year]) t
 ORDER BY [Year], [Quarter], [Month]
 
+	
+	
 /* Find the total sales by each month within each quarter of each year, 
 -- and calculate the quarter-to-month cumulative total (accumulating from the first month to the current month within each quarter of each year). */
 SELECT
@@ -78,6 +84,8 @@ FROM(
 	GROUP BY [Year], [Quarter], [Month Name], [Month Number of Year]) t
 ORDER BY [Year], [Quarter], [Month]
 
+
+	
 /* Find the total sales for each month of each year, and find the sales of the same month in the previous year. 
 -- Then calculate the increase (or decrease) in value compared to last year, as well as the percentage increase (or decrease) */
 SELECT
@@ -105,6 +113,8 @@ FROM(
 		GROUP BY [Year], [Month Name], [Month Number of Year]) t) t
 ORDER BY [Year], [Month]
 
+
+	
 /* Calculate the year-to-month cumulative sales (accumulating from the first month to the current month within the year), 
 -- and calculate the year-to-month sales for the same month last year. */
 SELECT
@@ -131,6 +141,8 @@ FROM(
 		GROUP BY [Year], [Month Name], [Month Number of Year]) t) t
 ORDER BY [Year], [Month]
 
+
+	
 /* Find the total sales for each month of each year, then calculate the 2-month rolling total including the current month and the previous month. */
 SELECT
 	[Year],
@@ -149,6 +161,8 @@ FROM(
 	GROUP BY [Year], [Month Number of Year], [Month Name]) t
 ORDER BY [Year], [Month]
 
+
+	
 /* Find the total sales for each month of each year, 
 -- then calculate the rolling average of the current month and the two previous months, and also calculate the average sales of all months. */
 SELECT
@@ -177,6 +191,8 @@ FROM(
 		GROUP BY [Year], [Month Number of Year], [Month Name]) t) t
 ORDER BY [Year], [Month]
 
+
+	
 /* Find the total sales by state and by country. */
 SELECT
 	Country,
@@ -207,6 +223,8 @@ FROM(
 	GROUP BY Country, State) t
 ORDER BY Country
 
+
+	
 /* Find the total sales by product and rank them. */
 SELECT
 	[English Product Name],
@@ -216,6 +234,8 @@ FROM dbo.[Internet Sales] LEFT JOIN dbo.Product
 ON dbo.[Internet Sales].ProductKey = dbo.Product.ProductKey
 GROUP BY [English Product Name]
 
+
+	
 /* Analyze each customer's loyalty by calculating the number of orders and the average number of days between orders, 
 -- then rank them in descending order by order count and in ascending order by average order interval. */
 SELECT
@@ -241,6 +261,8 @@ FROM(
 WHERE AVG_DayUntilNextOrder IS NOT NULL
 ORDER BY [Rank]
 
+
+	
 /* Analyze each customer's potential by calculating their number of orders and total sales, then rank them in order of order count and total sales. */
 SELECT
 	CustomerKey,
