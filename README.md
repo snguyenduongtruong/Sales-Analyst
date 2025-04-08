@@ -1,6 +1,5 @@
 # **Sales Analysis in Power BI and SQL**
 
-## This project uses Power BI Desktop and MS SQL Server to help analyze the potential of customers, countries, and products.
 
 ## **Data Modeling**
 ![Data Model](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/data_model.png)
