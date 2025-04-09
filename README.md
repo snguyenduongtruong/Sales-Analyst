@@ -8,8 +8,8 @@
 📌 Sale Analyst: extract and visualize for analyzing the sales insights based on customers, countries, and products.
 
 ## **Built with:**
-Power BI Desktop
-Microsoft SQL Server
+- Power BI Desktop
+- Microsoft SQL Server
 
 ## **Key Insights from Dashboard:**
 ### Sale by Country
@@ -27,8 +27,9 @@ Microsoft SQL Server
 - The highest total sales and profit come from the bike category, with subcategories such as road bikes and mountain bikes accounting for the largest shares.
 
 ## **Question I Wanted to Answer by SQL:**
-###
-
+### 1. Find the total sales of each country and the overall total, and calculate the percentage compared to the overall total
+### 2. Find the total sales by each month in each year, and calculate the year-to-month cumulative total (accumulating from the first month to the current month within the same year)
+### 3. Find the total sales by each month in each year, by each quarter in each year, by each year and the overall total for all years
 ## **Benefits:**
 - Focus on high-potential markets (including states, provinces, and cities within them).
 - Encourage customers who share similar characteristics with those identified as major contributors to sales.
