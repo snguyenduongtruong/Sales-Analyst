@@ -34,7 +34,7 @@
   <summary>Click to expand expected results!</summary>
 	
   ##### Expected Results:
-[Q1](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q1.png)
+(https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q1.png)
 </details>
 </p>
 <details>
@@ -61,7 +61,11 @@ ORDER BY SalesByCountry DESC
 
 
 ### 2. Find the total sales by each month in each year, and calculate the year-to-month cumulative total (accumulating from the first month to the current month within the same year)
-[Q2](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q2.png)
+<details>
+  <summary>Click to expand expected results!</summary>
+	
+  ##### Expected Results:
+(https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q2.png)
 </details>
 </p>
 <details>
@@ -87,6 +91,7 @@ FROM(
 ORDER BY [Year], [Month]
   ```
 </details>
+<br />
 
 ### 3. Find the total sales by each month in each year, by each quarter in each year, by each year and the overall total for all years
 
