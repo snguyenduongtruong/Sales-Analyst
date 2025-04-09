@@ -31,29 +31,11 @@
 ## **Question I Wanted to Answer by SQL:**
 
 ### 1. Find the total sales of each country and the overall total, and calculate the percentage compared to the overall total
-<strong>1.  Create Database, Tables and Relations.</strong>  
-Using the CSV files located in `source_data/csv_data`, create your new SQL database and tables with the properly formatted data.
-
-* Add a numeric, auto-incrementing Primary Key to every table.
-* In the `countries` table, add the column `created_on` with the current date.
-* Create a one-to-one and one-to-many relationship with the countries table as the parent table.
-
-<strong>2.  List Regions and Country Count</strong>  
-List all of the regions and the total number of countries in each region.  Order by country count in descending order and capitalize the region name.
-
 <details>
   <summary>Click to expand expected results!</summary>
-
+	
   ##### Expected Results:
-
-region   |country_count|
----------|-------------|
-Africa   |           59|
-Americas |           57|
-Asia     |           50|
-Europe   |           48|
-Oceania  |           26|
-Antartica|            1|
+[Q1](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q1.png)
 
 </details>
 </p>
