@@ -29,20 +29,17 @@
 
 
 ## **Question I Wanted to Answer by SQL:**
-
 ### 1. Find the total sales of each country and the overall total, and calculate the percentage compared to the overall total
 <details>
   <summary>Click to expand expected results!</summary>
 	
   ##### Expected Results:
 [Q1](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q1.png)
-
 </details>
 </p>
-
 <details>
   <summary>Click to expand answer!</summary>
-
+	
   ##### Answer
   ```sql
 SELECT
@@ -64,7 +61,39 @@ ORDER BY SalesByCountry DESC
 
 
 ### 2. Find the total sales by each month in each year, and calculate the year-to-month cumulative total (accumulating from the first month to the current month within the same year)
+[Q2](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q2.png)
+</details>
+</p>
+<details>
+  <summary>Click to expand answer!</summary>
+	
+  ##### Answer
+  ```sql
+SELECT
+	[Year],
+	[Month Name],
+	SalesByMonth,
+	SUM (SalesByMonth) OVER (PARTITION BY [Year] ORDER BY [Month]
+								ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) YTMSales
+FROM(
+	SELECT
+		[Year],
+		[Month Number of Year] AS [Month],
+		[Month Name],
+		ROUND(SUM([Sales Amount]), 2) AS SalesByMonth
+	FROM dbo.[Internet Sales] LEFT JOIN dbo.Date
+	ON dbo.[Internet Sales].ShipDateKey = dbo.Date.DateKey
+	GROUP BY [Year], [Month Number of Year], [Month Name]) t
+ORDER BY [Year], [Month]
+  ```
+</details>
+
 ### 3. Find the total sales by each month in each year, by each quarter in each year, by each year and the overall total for all years
+
+
+
+
+
 ## **Benefits:**
 - Focus on high-potential markets (including states, provinces, and cities within them).
 - Encourage customers who share similar characteristics with those identified as major contributors to sales.
