@@ -63,17 +63,19 @@ Antartica|            1|
 
   ##### Answer
   ```sql
-SELECT 
-	-- initcap() capitalizes the first letter of every word in a string.
-	initcap(region) AS region,
-	count(*) AS country_count
-FROM
-	cleaned_data.countries
-GROUP BY
-	-- Aggregate functions 'count()' require you to group all column fields.
-	region
-ORDER BY 
-	country_count DESC;
+SELECT
+	[Sales Territory Country],
+	SalesByCountry,
+	SUM(SalesByCountry) OVER() TotalSales,
+	ROUND(CAST(SalesByCountry AS FLOAT)/SUM(SalesByCountry) OVER() * 100, 2) AS PercentageOfTotal
+FROM(
+	SELECT 
+		[Sales Territory Country],
+		ROUND(SUM([Sales Amount]),2) AS SalesByCountry
+	FROM dbo.[Internet Sales] LEFT JOIN dbo.[Sales Territory]
+	ON dbo.[Internet Sales].SalesTerritoryKey = dbo.[Sales Territory].SalesTerritoryKey
+	GROUP BY [Sales Territory Country]) t
+ORDER BY SalesByCountry DESC
   ```
 </details>
 <br />
