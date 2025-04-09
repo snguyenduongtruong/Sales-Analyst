@@ -11,6 +11,7 @@
 - Power BI Desktop
 - Microsoft SQL Server
 
+
 ## **Key Insights from Dashboard:**
 ### Sale by Country
 ![Sales by Country](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_country.png)
@@ -26,7 +27,9 @@
 ![Sales by Product](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/sales_by_product.png)
 - The highest total sales and profit come from the bike category, with subcategories such as road bikes and mountain bikes accounting for the largest shares.
 
+
 ## **Question I Wanted to Answer by SQL:**
+
 ### 1. Find the total sales of each country and the overall total, and calculate the percentage compared to the overall total
 <strong>1.  Create Database, Tables and Relations.</strong>  
 Using the CSV files located in `source_data/csv_data`, create your new SQL database and tables with the properly formatted data.
@@ -57,6 +60,25 @@ Antartica|            1|
 
 <details>
   <summary>Click to expand answer!</summary>
+
+  ##### Answer
+  ```sql
+SELECT 
+	-- initcap() capitalizes the first letter of every word in a string.
+	initcap(region) AS region,
+	count(*) AS country_count
+FROM
+	cleaned_data.countries
+GROUP BY
+	-- Aggregate functions 'count()' require you to group all column fields.
+	region
+ORDER BY 
+	country_count DESC;
+  ```
+</details>
+<br />
+
+
 ### 2. Find the total sales by each month in each year, and calculate the year-to-month cumulative total (accumulating from the first month to the current month within the same year)
 ### 3. Find the total sales by each month in each year, by each quarter in each year, by each year and the overall total for all years
 ## **Benefits:**
