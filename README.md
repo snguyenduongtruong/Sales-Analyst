@@ -34,7 +34,7 @@
   <summary>Click to expand expected results!</summary>
 	
   ##### Expected Results:
-(https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q1.png)
+![Q1](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q1.png)
 </details>
 </p>
 <details>
@@ -65,7 +65,7 @@ ORDER BY SalesByCountry DESC
   <summary>Click to expand expected results!</summary>
 	
   ##### Expected Results:
-(https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q2.png)
+![Q2](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q2.png)
 </details>
 </p>
 <details>
@@ -94,9 +94,75 @@ ORDER BY [Year], [Month]
 <br />
 
 ### 3. Find the total sales by each month in each year, by each quarter in each year, by each year and the overall total for all years
+<details>
+  <summary>Click to expand expected results!</summary>
+	
+  ##### Expected Results:
+![Q3](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q3.png)
+</details>
+</p>
+<details>
+  <summary>Click to expand answer!</summary>
+	
+  ##### Answer
+  ```sql
+SELECT
+	[Year],
+	[Quarter],
+	[Month Name],
+	SalesByMonth,
+	SUM (SalesByMonth) OVER (PARTITION BY [Year], [Quarter]) AS SalesByQuarter,
+	SUM (SalesByMonth) OVER (PARTITION BY [Year]) AS SalesByYear,
+	SUM (SalesByMonth) OVER () AS TotalSales
+FROM(
+	SELECT
+		[Year],
+		[Quarter],
+		[Month Name],
+		[Month Number of Year] AS [Month],
+		ROUND(SUM([Sales Amount]), 2) AS SalesByMonth
+	FROM dbo.[Internet Sales] LEFT JOIN dbo.Date
+	ON dbo.[Internet Sales].ShipDateKey = dbo.Date.DateKey
+	GROUP BY [Year], [Quarter], [Month Name], [Month Number of Year]) t
+ORDER BY [Year], [Quarter], [Month]
+  ```
+</details>
+<br />
 
-
-
+### 4. Find the total sales by each month within each quarter of each year, and calculate the quarter-to-month cumulative total (accumulating from the first month to the current month within each quarter of each year)
+<details>
+  <summary>Click to expand expected results!</summary>
+	
+  ##### Expected Results:
+![Q4](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/Q4.png)
+</details>
+</p>
+<details>
+  <summary>Click to expand answer!</summary>
+	
+  ##### Answer
+  ```sql
+SELECT
+	[Year],
+	[Quarter],
+	[Month Name],
+	SalesByMonth,
+	SUM([SalesByMonth]) OVER (PARTITION BY [Year],[Quarter] ORDER BY [Month]
+	                              ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS QTMSales
+FROM(
+	SELECT
+		[Year],
+		[Quarter],
+		[Month Name],
+		[Month Number of Year] AS [Month],
+		ROUND(SUM([Sales Amount]), 2) AS SalesByMonth
+	FROM dbo.[Internet Sales] LEFT JOIN dbo.Date
+	ON dbo.[Internet Sales].ShipDateKey = dbo.Date.DateKey
+	GROUP BY [Year], [Quarter], [Month Name], [Month Number of Year]) t
+ORDER BY [Year], [Quarter], [Month]
+  ```
+</details>
+<br />
 
 
 ## **Benefits:**
