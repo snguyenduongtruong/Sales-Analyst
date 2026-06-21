@@ -1,0 +1,12 @@
+SalesTerritoryKey,SalesTerritoryAlternateKey,Sales Territory Region,Sales Territory Country,Sales Territory Group,Region Volume,Region Volume with Switch
+1,1,"Northwest","United States","North America","Medium Volume","Medium Volume"
+2,2,"Northeast","United States","North America","Low Volume","Low Volume"
+3,3,"Central","United States","North America","Low Volume","Low Volume"
+4,4,"Southwest","United States","North America","Medium Volume","Medium Volume"
+5,5,"Southeast","United States","North America","Low Volume","Low Volume"
+6,6,"Canada","Canada","North America","Low Volume","Low Volume"
+7,7,"France","France","Europe","Medium Volume","Medium Volume"
+8,8,"Germany","Germany","Europe","Medium Volume","Medium Volume"
+9,9,"Australia","Australia","Pacific","High Volume","High Volume"
+10,10,"United Kingdom","United Kingdom","Europe","Medium Volume","Medium Volume"
+11,0,"NA","NA","NA","N/A","N/A"
