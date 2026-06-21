@@ -14,13 +14,13 @@
 
 ## **Key Insights from Dashboard:**
 ### Overall
-![Overall](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/overview dashboard.png)
-### Sale by Country
-![Sales by Country](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/territory dashboard.png)
+![Overall](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/overview%20dashboard.png)
+### Sale by Territory
+![Sales by Territory](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/territory%20dashboard.png)
 ### Sales by Customer
-![Sales by Customer](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/customer dashboard.png)
+![Sales by Customer](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/customer%20dashboard.png)
 ### Sales by Product
-![Sales by Product](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/product dashboard.png)
+![Sales by Product](https://github.com/snguyenduongtruong/Sales-Analyst/blob/main/product%20dashboard.png)
 
 
 ## **Question I Wanted to Answer by SQL:**
